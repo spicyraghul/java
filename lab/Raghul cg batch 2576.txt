@@ -1,0 +1,61 @@
+import java.util.Scanner;
+class Student
+{
+	public static void main (String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		
+		System.out.println("id number");
+		int a = s.nextInt();
+		System.out.println("studentname");
+		String b = s.next();
+		System.out.println("attedence");
+		String c = s.next();
+}
+}
+
+
+
+
+class Datatype
+{
+public static void main (String [] args)
+{
+			byte age=21;
+		System.out.println(age);
+		short pinnum=212;
+		System.out.println(pinnum);
+		int regno=56782;
+		System.out.println(regno);
+		Long phno=6572121512l;
+		System.out.println(phno);
+		float average=1.09f;
+		System.out.println(average);
+		double bill=9.009;
+		System.out.println(bill);
+		char gender='M';
+		System.out.println(gender);
+		String email="spicy@132";
+		System.out.println(email);
+		boolean result=true;
+		System.out.println(result);
+}
+}
+
+
+
+import java.util.Scanner;
+class Student
+{
+	public static void main (String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		
+		System.out.println("id number");
+		int a = s.nextInt();
+		System.out.println("studentname");
+		String b = s.next();
+		System.out.println("atedence");
+		String c = s.next();
+		}
+		}
