@@ -1,0 +1,176 @@
+1 To make menu driven using 2d array
+
+
+import java.util.Scanner;
+
+public class Marksmenudriven {
+	public static void main(String[] args) {
+		int ch;
+		int[][] a=new int [2][2]; 
+		int[][] b=new int [2][2];
+		int[][] c=new int [2][2];
+		
+		System.out.println("first num");
+		Scanner s=new Scanner(System.in);
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a.length; j++) {
+				a[i][j]=s.nextInt();	}	
+		}
+		System.out.println("second num");
+		for (int i = 0; i < b.length; i++) {
+			for (int j = 0; j < b.length; j++) {
+				b[i][j]=s.nextInt();	}
+		}
+		
+		System.out.println("1  addition");
+		System.out.println("2   multiplication");
+		System.out.println("3   transpose");
+		ch=s.nextInt();
+		switch (ch) {
+		case 1:
+			
+			for (int i = 0; i < 1; i++) {
+				for (int j = 0; j < 1; j++) {
+				c[i][j]=a[i][j]+b[i][j];
+				System.out.println(c[i][j]);
+				}
+				
+			}
+			
+			break;
+		case 2:
+		       for (int i = 0; i < 1; i++) {
+		    	   for (int j = 0; j < 1; j++) {
+		    		   c[i][j]=0;
+		    		   for (int k = 0; k < 1; k++) {
+		    			c[i][j]=c[i][j]+(a[i][j]*b[i][j]);
+		    			System.out.println(c[i][j]);
+						
+					}
+					
+				}
+				
+			}     
+		 
+		case 3:
+			for (int i = 0; i < a.length; i++) {
+				for (int j = 0; j < a.length; j++) {
+				System.out.print(a[j][i]);	
+				}	
+				System.out.println();
+			}
+			break;
+			
+			
+
+		default:
+			System.out.println("in valid");
+			break;
+		}
+	}
+
+}
+
+
+---------------------------------------------------------------------------------------------------
+
+2  students avg , total
+
+
+
+public class Marks {
+	public static void main(String[] args) {
+		int [] mark= {20,30,50,60,70};
+		int total=0;
+		int avg;
+		for (int i = 0; i < mark.length; i++) {
+			total=total+mark[i];
+			if (mark[i]>40) {
+				System.out.println("pass");
+			}if (mark[i]<40) {
+				System.out.println("fail");
+			}
+		}
+		System.out.println("total:"+total);
+		avg=total/5;
+		System.out.println("avg:"+avg);
+		
+	}
+
+}
+
+--------------------------------------------------------------------------------------------------------
+
+
+3  maximun minium of array
+
+
+
+public class Minmax {
+	public static void main(String[] args) {
+		int arr[]= {2,4,5,6,9,1,0};
+		int min=arr[0];
+		int max=0;
+		for (int i = 0; i < arr.length; i++) {
+			if (min>arr[i]) {
+				min=arr[i];
+			}if (arr[i]>max) {
+				max=arr[i];
+			}}
+		    System.out.println("minimum:"+min);
+			System.out.println("maximum:"+max);
+		}
+	}
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+4  duplicates of array
+
+
+public class Duplicates {
+	public static void main(String[] args) {
+		int [] a=new int[6];
+		a[0]=10;
+		a[1]=30;
+		a[2]=10;
+		a[3]=40;
+		a[4]=4;
+		a[5]=30;
+		for (int i = 0; i < a.length; i++) {
+	for (int j = i+1; j < a.length; j++) {
+		if (a[i]==a[j]) {
+			System.out.println(a[j]);
+		}
+	}
+			}
+		}
+		
+	}
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+5  sum of array
+
+
+public class Sumofarray {
+	public static void main(String[] args) {
+	int sum=0;	
+	char c='y';
+	int [] a=new int[4];
+			a[0]=10;
+			a[1]=30;
+			a[2]=1;
+			a[3]=40;
+			for (int j = 0; j < a.length; j++) {
+				if (c=='y') {
+					sum=sum+a[j];	
+			}}
+				System.out.println(sum);
+			
+
+}}
+
