@@ -1,0 +1,152 @@
+1 class & odject
+
+
+class student{
+	int studenid;
+	String studenname;
+	double marks;
+	
+	void execute(int x,String y,double z){
+		studentid=x;
+		studentname=y;
+		marks=z;
+	}
+	void a() {
+		System.out.println(studentid+" "+studentname+" "+marks);
+	}
+}
+
+public class sample {
+	public static void main(String[] args) {
+		student s=new student();
+		s.execute(21," raghul", 69.0);
+		s.a();
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------
+
+
+2  constructor overloading
+
+
+class bankcus{
+	int accountnum;
+	String accountname;
+	double amt;
+	bankcus(int a,String b,double c){
+		accountnum=a;
+		accountname=b;
+		accountmt=c;
+	}void show(){
+		System.out.println(accountnum+" "+accountname+" "+accountmt);
+	}
+	
+}
+
+public class bank {
+	public static void main(String[] args) {
+		bankcus b=new bankcus(0123, "saving", 555.0);
+		b.show();
+	}
+
+}
+
+
+--------------------------------------------------------------------------------------------------
+
+
+3  multiple ihertiance
+                                             
+
+package org.srr;
+
+public interface interface1 {
+	void red();
+	void green();
+
+}
+
+--------------------------------   [cont]
+
+
+package org.srr;
+
+public class interface2 implements interface1 {
+
+	@Override
+	public void red() {
+		
+		System.out.println("11");
+	}
+
+	@Override
+	public void green() {
+	
+		System.out.println("22");
+	}
+	public static void main(String[] args) {
+		interface2 a=new interface2();
+		a.red();
+		a.green();
+	}
+	
+
+}
+
+-------------------------------------------------------------------------------------------------------
+
+
+4  this costructor chaining
+
+
+class demo{
+	demo(){
+		this(10);
+		System.out.println("cons 1");
+	}demo(int x){
+		
+		System.out.println("cons 2");
+	}
+}
+
+public class chaining {
+	public static void main(String[] args) {
+		demo d=new demo();
+	}
+
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+
+5  package  
+
+package org.srr;
+
+public class package1 {
+	public void sample() {
+	System.out.println("enter");
+
+	}
+
+}
+-----------------------------------------------[ cont ]
+
+
+package anudip.org;
+
+import org.srr.package1;
+
+
+public class package2 {
+	public static void main(String[] args) {
+		package1 s=new package1();
+		s.sample();
+	
+		
+	}
+
+}
