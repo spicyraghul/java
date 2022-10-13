@@ -1,0 +1,228 @@
+ 1 class & odject
+
+
+class student{
+	int sid;
+	String sname;
+	double marks;
+	
+	void execute(int x,String y,double z){
+		sid=x;
+		sname=y;
+		marks=z;
+	}
+	void a() {
+		System.out.println(sid+" "+sname+" "+marks);
+	}
+}
+
+public class sample {
+	public static void main(String[] args) {
+		student s=new student();
+		s.execute(10," suman", 99.0);
+		s.a();
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------
+
+
+2  constructor overloading
+
+
+class bankcus{
+	int acnum;
+	String acname;
+	double amt;
+	bankcus(int a,String b,double c){
+		acnum=a;
+		acname=b;
+		amt=c;
+	}void show(){
+		System.out.println(acnum+" "+acname+" "+amt);
+	}
+	
+}
+
+public class bank {
+	public static void main(String[] args) {
+		bankcus b=new bankcus(0123, "…
+[3:58 PM, 10/9/2022] Magesh Mech B: Lst week
+[3:58 PM, 10/9/2022] Magesh Mech B: 1 inheritance
+
+
+package anudip.org;
+class person1{
+	void pid() {
+		System.out.println("123");
+	}
+	
+}
+class student extends person1{
+	void marks() {
+		System.out.println("99");
+	}
+}
+class emp extends person1{
+	void salary() {
+		System.out.println("50000");
+	}
+}
+public class person {
+	public static void main(String[] args) {
+		student s=new student();
+		s.pid();
+		s.marks();
+	}
+	
+
+}
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+2  overide bank
+
+package anudip.org;
+class bank{
+	int interest() {
+		return 0;
+	}
+}
+class sbi extends bank{
+	int interest () {
+		return 4;
+	}
+}
+class axis extends bank{
+	int interest() {
+		return 1;
+	}
+}
+
+public class bankdetail {
+	public static void main(String[] args) {
+		sbi s=new sbi();
+		axis a=new axis();
+		System.out.println("interest:"+s.interest());
+		System.out.println("interest:"+a.interest());
+	}
+
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+3  swap over loading
+
+
+package anudip.org;
+class swap1{
+	void sample(int a, int b) {
+		int c;
+		c=a;
+		a=b;
+		b=c;
+		System.out.println(a+""+b);
+	}
+	void sample(double x,double y) {
+		double z;
+		z=x;
+		x=y;
+		y=z;
+		System.out.println(x+""+y);
+	}
+}
+
+public class swap {
+	public static void main(String[] args) {
+		swap1 s=new swap1();
+		s.sample(1.1, 2.2);
+		s.sample(1, 9);
+	}
+
+}
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4  encapsulation
+
+
+package anudip.org;
+class student1{
+	private int sid;
+	private String sname;
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	
+}
+
+public class encap {
+	public static void main(String[] args) {
+		student1 s=new student1();
+		s.setSid(12);
+		s.setSname("ajith");
+		System.out.println(s.getSid()+" "+ s.getSname());
+	}
+
+}
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+5  abstract hirerchial
+
+
+package anudip.org;
+abstract class shape{
+	abstract void draw();
+	
+}
+class circle extends shape{
+
+	@Override
+	void draw() {
+		System.out.println("circle draw");
+		
+	}
+	
+}
+class rectangle extends shape{
+
+	@Override
+	void draw() {
+		System.out.println("rectangle draw");
+		
+	}
+	
+}
+
+public class absrat {
+	public static void main(String[] args) {
+		shape s=new rectangle();
+		s.draw();
+	}
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
