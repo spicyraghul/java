@@ -1,0 +1,198 @@
+1 thread
+
+
+package anudip.org;
+class tread1 extends Thread{
+	public void run() {
+		System.out.println("sucess");
+	}
+}
+
+public class threaddem {
+	public static void main(String[] args) {
+		tread1 t=new tread1();
+		
+		t.start();
+		t.setName("ajith");
+		System.out.println(t.getName());
+	}
+
+}
+
+
+--------------------------------------------------------------------------------
+
+2  sleep join  
+
+
+package anudip.org;
+
+class slepjoin extends Thread{
+	 public void run() {
+		for (int i = 0; i <4; i++) {
+		try {
+		Thread.sleep(400);	
+		} catch (Exception e) {
+			
+		}
+		System.out.println(i);
+		}
+	}
+}
+
+public class sleep {
+	public static void main(String[] args) {
+		slepjoin s1=new slepjoin();
+		slepjoin s2=new slepjoin();
+		s1.start();
+		try {
+			s1.join();
+		} catch (Exception e) {
+			
+		}
+		s2.start();
+	}
+
+}
+
+
+-----------------------------------------------------------------------------
+
+3  syncronization
+
+package anudip.org;
+ class table{
+	 synchronized static void prnttab(int n) {
+		 for (int i = 0; i <3; i++) {
+			System.out.println(n*i);
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+			
+			}
+		}
+	 }
+ }
+ class table2 extends Thread{
+	public void run() {
+		table.prnttab(2);
+	} 
+ }
+
+public class synch {
+	public static void main(String [] args) {
+		table2 t1=new table2();
+		t1.start();
+	}
+	
+	
+
+}
+
+
+-------------------------------------------------------------------------------------
+
+4 map
+
+package anudip.org;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+
+public class map {
+	public static void main(String[] args) {
+		HashMap<Integer, String>m=new HashMap<>();
+		m.put(1, "abc");
+		m.put(2, "fgh");
+		m.put(3, "xyz");
+		m.replace(1, "rty");
+		m.remove(3);
+		System.out.println(m.entrySet());
+		
+	
+          LinkedHashMap<Integer, String>m1=new LinkedHashMap<Integer, String>();
+          m1.put(8, "add");
+  		m1.put(1, "fxd");
+  		m1.put(4, "ddf");
+  		
+  		System.out.println(m1.entrySet());
+  		
+  		TreeMap<Integer, String> m2=new TreeMap<>();
+  		m2.put(8, "add");
+  		m2.put(1, "fxd");
+  		m2.put(4, "ddf");
+  		System.out.println(m2.entrySet());
+  		
+}}
+
+
+-------------------------------------------------------------------------------------
+
+5  queue
+
+package anudip.org;
+
+import java.util.Iterator;
+import java.util.PriorityQueue;
+
+public class collectionquee {
+	public static void main(String[] args) {
+		
+		PriorityQueue<String> q=new PriorityQueue<>();
+		q.add("work");
+		q.add("mm");
+		q.add("tyu");
+		q.add("fghj");
+		q.add("ddff");
+		System.out.println(q.peek());
+		Iterator<String> i=q.iterator();
+		while (i.hasNext()) {
+			System.out.println(i.next());
+			
+		}
+		q.remove();
+		q.poll();
+	}
+
+}
+
+
+-----------------------------------------------------------------------------------
+
+6 user defind list
+
+package anudip.org;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class details {
+	int rolno;
+	String name;
+	public details(int rolno, String name) {
+		super();
+		this.rolno = rolno;
+		this.name = name;
+	}
+	
+}
+
+public class student {
+	public static void main(String[] args) {
+		details d1=new details(11, "ajith");
+		details d2 =new details(12, "magesh");
+		ArrayList<details>a=new ArrayList<>();
+		a.add(d1);
+		a.add(d2);
+		Iterator<details> i=a.iterator();
+		while (i.hasNext()) {
+			details dt=(details)i.next();
+			System.out.println(dt.name+" "+dt.rolno);
+		}
+	}
+
+}
+
+
+-----------------------------------------------------------------------------------------------------
