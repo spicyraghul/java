@@ -1,0 +1,139 @@
+1 file handling
+
+package anudip.org;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class EMPDETAILS{
+	public static void main(String[] args) throws IOException {
+		
+		FileOutputStream out=new FileOutputStream("c:emp.txt");
+		
+		String s="eid , ename , salary";
+		
+		byte [] b=s.getBytes();
+		out.write(b);
+		System.out.println("sucess..");
+		out.close();
+	}
+}
+
+----------------------------------------------------------------------------------------------------------
+
+2  file reader & file writer
+
+
+package anudip.org;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class filereader {
+	public static void main(String[] args)throws IOException{
+		FileReader in=null;
+		FileWriter out=null;
+		try {
+			in= new FileReader("c:emp.txt");
+			out= new FileWriter("c:emp1.txt");
+			int c;
+			while ((c=in.read()) != -1) {
+				out.write(c);
+				
+			}
+		} finally {
+			if (in!=null) {
+				in.close();
+			}if (out!=null) {
+				out.close();
+			}
+		}
+		
+		
+	}
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+3  scanner
+
+
+package anudip.org;
+
+import java.util.Scanner;
+
+public class scaner {
+    public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int eid;
+		String ename;
+		double salary;
+		Boolean a;
+		System.out.println("enter eid");
+		eid=s.nextInt();
+		System.out.println("enter name");
+		ename=s.next();
+		System.out.println("salary");
+		salary=s.nextDouble();
+		System.out.println("boolean");
+		a=s.nextBoolean();
+		
+		System.out.println(eid+" "+ ename+" "+salary+" "+a);
+	}
+
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+4  console class
+
+package anudip.org;
+
+import java.io.Console;
+
+public class pwd {
+	public static void main(String[] args) {
+		 
+		Console c=System.console();
+		System.out.println("enter pwd");
+		char[]ch=c.readPassword();
+		String s=String.valueOf(ch);
+		System.out.println("pwd is"+s);
+	}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+5 print writer
+
+
+package anudip.org;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+
+public class printwriter {
+	public static void main(String[] args) throws IOException {
+		FileOutputStream out=new FileOutputStream("c:abc.txt");
+		PrintStream p= new PrintStream(out);
+		p.print(12);
+		p.print("raghul ");
+		p.print(12.00);
+		p.close();
+		out.close();
+	}
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------
